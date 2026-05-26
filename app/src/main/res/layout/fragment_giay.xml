@@ -1,49 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F5F5F5">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".fragment.GiayFragment"
+android:padding="10dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilSearchGiay"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Tìm kiếm sản phẩm..."
-        app:endIconMode="clear_text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/search_timkiem">
+        android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSearchGiay"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:layout_weight="8.5"
+            android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="#56b1bf"
+            app:boxStrokeWidthFocused="3dp"
+            app:helperTextTextColor="#FF0000"
+            app:hintTextColor="#56b1bf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_search_Giay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SEARCH "
+                android:textSize="20dp"
+                android:inputType="text"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/img_search_Giay"
+            android:src="@drawable/timkiem50x50" />
+    </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvGiay"
+    <ListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/lv_giay"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:paddingHorizontal="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilSearchGiay"
-        tools:listitem="@layout/giay_item" />
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="15dp"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddGiay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white" />
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fab_giay"
+    android:layout_gravity="bottom|right"
+    android:layout_margin="16dp"
+    android:backgroundTint="#56b1bf"
+    android:src="@drawable/ic_baseline_add_24"
+    app:layout_anchorGravity="bottom|right|end"/>
+
+</FrameLayout>

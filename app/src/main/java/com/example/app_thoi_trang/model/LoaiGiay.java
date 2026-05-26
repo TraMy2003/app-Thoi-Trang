@@ -11,4 +11,4 @@ public class LoaiGiay {
         this.maLoai = maLoai;
         this.tenLoai = tenLoai;
     }
-}// Thành viên Mạnh Thành Phát thực hiện chức năng Quản lý kho.
+}

@@ -6,19 +6,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class HoaDonDAO {
-}
-package com.example.app_thoi_trang.dao;
-
-import android.annotation.SuppressLint;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-
 import com.example.app_thoi_trang.database.DbHelper;
 import com.example.app_thoi_trang.model.HoaDon;
 

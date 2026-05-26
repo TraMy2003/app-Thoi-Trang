@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.example.app_thoi_trang.MainActivity">
+    tools:context="com.example.thoitrang.MainActivity">
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:fitsSystemWindows="true"
